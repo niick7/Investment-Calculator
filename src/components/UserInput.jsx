@@ -1,4 +1,4 @@
-export default function UserInput({ userInputs, onChange }) {
+export default function UserInput({ userInputs, handleChange }) {
   return (
     <section id="user-input">
       <div className="input-group">
@@ -7,9 +7,9 @@ export default function UserInput({ userInputs, onChange }) {
           <input
             type="number"
             required
-            value={userInputs.initialInvesment}
+            value={userInputs.initialInvestment}
             onChange={(event) =>
-              onChange("initialInvestment", event.target.value)
+              handleChange("initialInvestment", event.target.value)
             }
           />
         </p>
@@ -18,9 +18,9 @@ export default function UserInput({ userInputs, onChange }) {
           <input
             type="number"
             required
-            value={userInputs.annualInvesment}
+            value={userInputs.annualInvestment}
             onChange={(event) =>
-              onChange("annualInvestment", event.target.value)
+              handleChange("annualInvestment", event.target.value)
             }
           />
         </p>
@@ -32,7 +32,7 @@ export default function UserInput({ userInputs, onChange }) {
             type="number"
             required
             value={userInputs.expectedReturn}
-            onChange={(event) => onChange("expectedReturn", event.target.value)}
+            onChange={(event) => handleChange("expectedReturn", event.target.value)}
           />
         </p>
         <p>
@@ -41,7 +41,7 @@ export default function UserInput({ userInputs, onChange }) {
             type="number"
             required
             value={userInputs.duration}
-            onChange={(event) => onChange("duration", event.target.value)}
+            onChange={(event) => handleChange("duration", event.target.value)}
           />
         </p>
       </div>

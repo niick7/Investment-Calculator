@@ -5,17 +5,17 @@ import Result from "./components/Result";
 
 function App() {
   const [userInputs, setUserInputs] = useState({
-    initialInvesment: 10000,
-    annualInvesment: 1200,
+    initialInvestment: 10000,
+    annualInvestment: 1200,
     expectedReturn: 6,
     duration: 10,
   });
 
-  function handleChange({ inputIdentifier, newValue }) {
+  function handleChange(inputIdentifier, newValue) {
     setUserInputs((prevInputs) => {
       return {
         ...prevInputs,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   }
@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Header />
-      <UserInput userInputs={userInputs} onChange={handleChange} />
+      <UserInput userInputs={userInputs} handleChange={handleChange} />
       <Result userInputs={userInputs} />
     </>
   );
