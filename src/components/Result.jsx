@@ -1,5 +1,7 @@
-export default function Result() {
+export default function Result({ userInputs }) {
   return (
-    <h1>Result</h1>
-  )
+    <section id="result">
+      
+    </section>
+  );
 }
